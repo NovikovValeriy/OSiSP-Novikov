@@ -133,8 +133,7 @@ int main() {
     }
 
     for (int i = 0; i < NUM_PHILOSOPHERS; ++i) {
-        philosophers[i] = CreateThread(
-            NULL, 0, philosopher, (LPVOID)i, 0, NULL);
+        philosophers[i] = CreateThread(NULL, 0, philosopher, (LPVOID)i, 0, NULL);
         if (philosophers[i] == NULL) {
             std::cerr << "Failed to create thread for philosopher " << i << ".\n";
             return 1;
